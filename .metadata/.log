@@ -1,50 +1,21 @@
-!SESSION 2016-05-17 11:58:24.677 -----------------------------------------------
-eclipse.buildId=4.4.0.I20140606-1215
-java.version=1.8.0_71
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data E:\luna_workspace -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.egit.ui 2 0 2016-05-17 11:58:31.645
-!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
-Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
-The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
-this system level configuration. The Git installation location can be configured on the
-Team > Git > Configuration preference page's 'System Settings' tab.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-05-17 11:58:31.659
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\CHEN'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-!SESSION 2016-05-17 13:42:42.359 -----------------------------------------------
-eclipse.buildId=4.4.0.I20140606-1215
-java.version=1.8.0_71
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data E:\luna_workspace -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-05-17 13:42:51.779
-!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
-Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
-The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
-this system level configuration. The Git installation location can be configured on the
-Team > Git > Configuration preference page's 'System Settings' tab.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.egit.ui 2 0 2016-05-17 13:42:51.784
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\CHEN'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.wst.common.frameworks 4 0 2016-05-17 13:43:37.347
-!MESSAGE Function group org.eclipse.jst.j2ee contains no pattern bindings
-
-!ENTRY org.eclipse.wst.common.frameworks 4 0 2016-05-17 13:43:37.347
-!MESSAGE Function group org.eclipse.jst.j2ee contains no pattern bindings
+!ENTRY org.eclipse.core.jobs 4 2 2016-05-17 14:16:04.426
+!MESSAGE An internal error occurred during: "Resetting to HEAD".
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of reset command. {0}
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:227)
+	at org.eclipse.egit.core.op.ResetOperation.reset(ResetOperation.java:97)
+	at org.eclipse.egit.core.op.ResetOperation.access$0(ResetOperation.java:85)
+	at org.eclipse.egit.core.op.ResetOperation$1.run(ResetOperation.java:74)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.ResetOperation.execute(ResetOperation.java:78)
+	at org.eclipse.egit.core.internal.job.JobUtil$2.runInWorkspace(JobUtil.java:105)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log570240152477838557.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1232)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:459)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
+	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:393)
+	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:200)
+	... 8 more
