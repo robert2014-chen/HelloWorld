@@ -1,21 +1,58 @@
 
-!ENTRY org.eclipse.core.jobs 4 2 2016-05-17 14:16:04.426
-!MESSAGE An internal error occurred during: "Resetting to HEAD".
+!ENTRY org.eclipse.egit.ui 4 0 2016-05-17 11:49:42.533
+!MESSAGE Exception caught during execution of add command
 !STACK 0
-org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of reset command. {0}
-	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:227)
-	at org.eclipse.egit.core.op.ResetOperation.reset(ResetOperation.java:97)
-	at org.eclipse.egit.core.op.ResetOperation.access$0(ResetOperation.java:85)
-	at org.eclipse.egit.core.op.ResetOperation$1.run(ResetOperation.java:74)
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of add command
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:212)
+	at org.eclipse.egit.core.op.CommitOperation.addUntracked(CommitOperation.java:222)
+	at org.eclipse.egit.core.op.CommitOperation.access$4(CommitOperation.java:210)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:195)
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
-	at org.eclipse.egit.core.op.ResetOperation.execute(ResetOperation.java:78)
-	at org.eclipse.egit.core.internal.job.JobUtil$2.runInWorkspace(JobUtil.java:105)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:206)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:93)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: 另一个程序已锁定文件的一部分，进程无法访问。
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(Unknown Source)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:302)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:100)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:188)
+	... 7 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-05-17 14:16:41.245
+!MESSAGE Branch failed
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:138)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.BranchOperation.execute(BranchOperation.java:164)
+	at org.eclipse.egit.ui.internal.branch.BranchOperationUI$1.runInWorkspace(BranchOperationUI.java:279)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-Caused by: java.io.IOException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log570240152477838557.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+Caused by: org.eclipse.jgit.api.errors.JGitInternalException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:315)
+	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:134)
+	... 5 more
+Caused by: java.io.IOException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
 	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1232)
 	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:459)
 	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
-	at org.eclipse.jgit.api.ResetCommand.checkoutIndex(ResetCommand.java:393)
-	at org.eclipse.jgit.api.ResetCommand.call(ResetCommand.java:200)
-	... 8 more
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:258)
+	... 6 more
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2016-05-17 14:16:41.245
+!MESSAGE Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:315)
+	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:134)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.egit.core.op.BranchOperation.execute(BranchOperation.java:164)
+	at org.eclipse.egit.ui.internal.branch.BranchOperationUI$1.runInWorkspace(BranchOperationUI.java:279)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1232)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:459)
+	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
+	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:258)
+	... 6 more
