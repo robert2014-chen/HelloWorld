@@ -1,0 +1,43 @@
+package com.robert.blend.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = "greetServlet", urlPatterns = { "/greetServlet" }, initParams = { @WebInitParam(name = "hello", value = "你好") })
+public class GreetServlet extends HttpServlet {
+
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		System.out.println("Greet Servlet init !");
+	}
+
+	@Override
+	public void service(ServletRequest req, ServletResponse res)
+			throws ServletException, IOException {
+		try {
+			Thread.sleep(5*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		// super.service(req, res);
+		// 通过ServletConfig获取当前Servlet的配置参数
+		System.out.println("配置参数："
+				+ getServletConfig().getInitParameter("hello"));
+		System.out.println("请求参数：" + req.getParameter("hi"));
+		System.out.println("改变请求中的值：");
+		req.setAttribute("hi", "您好");
+		// ((HttpServletResponse) res).sendRedirect("/struts/index.jsp");
+		((HttpServletResponse) res).sendRedirect("./test/listAll.jsp");
+		return;
+	}
+}

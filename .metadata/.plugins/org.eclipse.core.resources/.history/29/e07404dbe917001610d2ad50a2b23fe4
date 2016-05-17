@@ -1,0 +1,23 @@
+package com.robert.blend.hibernate.event;
+
+import org.hibernate.event.internal.DefaultLoadEventListener;
+
+/**
+ * <p>
+ * Hibernate的事件框架由两个部分组成： <br/>
+ * <ul>
+ * <li>拦截器机制：对于特定动作拦截，回调应用中的特定动作</li>
+ * <li>事件系统：重写hibernate的事件监听器</li>
+ * </ul>
+ * </p>
+ * <p>
+ * Session接口的每个方法都有对应的事件，比如LoadEvent、FlushEvent等。当Session调用某个方法时，Hibernate
+ * Session会生成对应的事件，并激活对应的事件监听器。
+ * </p>
+ * 
+ * @author CHEN
+ *
+ */
+public class MyLoaderListener extends DefaultLoadEventListener {
+
+}

@@ -1,0 +1,26 @@
+package com.robert.blend.hibernate.cache;
+
+import org.hibernate.cfg.Configuration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.junit.Test;
+
+import com.robert.blend.hibernate.domain.News;
+import com.robert.blend.hibernate.util.HibernateUtil;
+
+public class EhcacheTest {
+
+	// @Test
+	// public void init() {
+	// Configuration cfg = new Configuration().configure();
+	// // 把对象类导成表
+	// SchemaExport export = new SchemaExport(cfg);
+	// // 生成ddl
+	// export.create(true, true);
+	// }
+
+	@Test
+	public void testLoad() {
+		News news = (News) HibernateUtil.getSessionFactory()
+				.getCurrentSession().get(News.class, 1);
+	}
+}

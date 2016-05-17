@@ -1,0 +1,7 @@
+package com.robert.blend.hibernate.event;
+
+import org.hibernate.event.internal.DefaultLoadEventListener;
+
+public class MyLoaderListener extends DefaultLoadEventListener {
+
+}

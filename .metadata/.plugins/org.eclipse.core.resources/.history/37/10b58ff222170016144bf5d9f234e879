@@ -1,0 +1,78 @@
+package com.robert.blend.hibernate.domain;
+
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="news_info")
+public class News {
+
+	private Integer Id;
+	
+	private String name;
+	
+	private String content;
+	
+	private String fullContent;
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return Id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		Id = id;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the content
+	 */
+	public String getContent() {
+		return content;
+	}
+
+	/**
+	 * @param content the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	/**
+	 * @return the fullContent
+	 */
+	public String getFullContent() {
+		return fullContent;
+	}
+
+	/**
+	 * @param fullContent the fullContent to set
+	 */
+	public void setFullContent(String fullContent) {
+		this.fullContent = fullContent;
+	}
+	
+	
+}

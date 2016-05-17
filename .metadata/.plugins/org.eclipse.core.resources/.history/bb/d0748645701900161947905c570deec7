@@ -1,0 +1,20 @@
+package com.robert.blend.thinking.innerclass;
+
+public class MyInnerClass {
+
+	public String pro1 = "pro1";
+
+	/**
+	 * <p>
+	 * 像一个属性样定义在外部类中，可以使用外部类所有的成员
+	 * </p>
+	 * 
+	 * @author CHEN
+	 *
+	 */
+	class Hello {
+		public void print() {
+			System.out.println(pro1);
+		}
+	}
+}

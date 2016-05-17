@@ -1,0 +1,14 @@
+package com.robert.blend.thinking.nio;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class WriteOrReadFileTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

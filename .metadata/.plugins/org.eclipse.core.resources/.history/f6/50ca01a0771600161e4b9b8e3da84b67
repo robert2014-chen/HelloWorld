@@ -1,0 +1,8 @@
+package com.robert.blend.web.websocket;
+
+import javax.websocket.ClientEndpoint;
+
+@ClientEndpoint
+public class BroadcastClientEndpoint {
+
+}

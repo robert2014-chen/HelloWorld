@@ -1,0 +1,4 @@
+1460079065875	Extract method 'bufferThreeProperties'
+1460079216147	Extract method 'validateChildBuffer'
+1460079410630	Extract method 'onlyReadBuffer'
+1460081335889	Extract method 'directBuffer'

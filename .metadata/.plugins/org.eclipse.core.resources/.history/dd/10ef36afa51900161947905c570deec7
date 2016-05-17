@@ -1,0 +1,86 @@
+package com.robert.blend.thinking.thread.ticket.domain;
+
+import java.util.Date;
+
+public class Ticket {
+
+	private Integer id;
+
+	private String start;
+
+	private String end;
+
+	private Date date;
+
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the start
+	 */
+	public String getStart() {
+		return start;
+	}
+
+	/**
+	 * @param start
+	 *            the start to set
+	 */
+	public void setStart(String start) {
+		this.start = start;
+	}
+
+	/**
+	 * @return the end
+	 */
+	public String getEnd() {
+		return end;
+	}
+
+	/**
+	 * @param end
+	 *            the end to set
+	 */
+	public void setEnd(String end) {
+		this.end = end;
+	}
+
+	/**
+	 * @return the date
+	 */
+	public Date getDate() {
+		return date;
+	}
+
+	/**
+	 * @param date
+	 *            the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Ticket [id=" + id + ", start=" + start + ", end=" + end
+				+ ", date=" + date + "]";
+	}
+
+}

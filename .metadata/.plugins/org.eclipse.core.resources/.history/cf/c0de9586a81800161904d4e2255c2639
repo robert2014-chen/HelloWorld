@@ -1,0 +1,50 @@
+package com.robert.blend.hibernate.cache;
+
+import java.util.Date;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.junit.Test;
+
+import com.robert.blend.hibernate.domain.News;
+import com.robert.blend.hibernate.domain.Season;
+import com.robert.blend.hibernate.util.HibernateUtil;
+
+public class EhcacheTest {
+
+	// @Test
+	// public void init() {
+	// Configuration cfg = new Configuration().configure();
+	// // 把对象类导成表
+	// SchemaExport export = new SchemaExport(cfg);
+	// // 生成ddl
+	// export.create(true, true);
+
+	// Session session = HibernateUtil.getSessionFactory().openSession();
+	// Transaction transcation = session.beginTransaction();
+	// News news = new News();
+	// news.setName("title");
+	// news.setContent("content");
+	// news.setDate(new Date());
+	// news.setSeason(Season.春季);
+	// news.setNothing("nothing");
+	// session.save(news);
+	// transcation.commit();
+	// session.close();
+	// }
+
+	@Test
+	public void testLoad() {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		session.beginTransaction();
+		session.createQuery("FROM News ").list();
+		session.getTransaction().commit();
+//
+//		System.out.println("-----------------------------");
+//		Session session2 = HibernateUtil.getSessionFactory().openSession();
+//		session2.beginTransaction();
+//		session2.get(News.class, 1);
+//		session2.getTransaction().commit();
+	}
+
+}

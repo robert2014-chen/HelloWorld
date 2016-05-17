@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>使用WebSocket通信</title>
+<script type="text/javascript">
+	var websocket = new WebSocket("ws://127.0.0.1:9999/struts/websocket/chat");
+	var sendMsg = function() {
+		var inputElement = document.getElementById('msg');
+		websocket.send(inputElement.value);
+		inputElement.value = '';
+	};
+	var send = function(event) {
+		if (event.keyCode == 13) {
+			sendMsg();
+		}
+	};
+	websocket.onopen = function() {
+		websocket.onmessage = function(event) {
+			var show = document.getElementById('show');
+			show.innerHTML += event.data + "<br/>";
+			show.scrollTop = show.scrollHeight;
+		};
+		document.getElementById("msg").onkeydown = send;
+		document.getElementById("sendBn").onclick=sendMsg;
+	};
+	websocket.onclose=function(){
+		document.getElementById('msg').onkeydown=null;
+		document.getElementById('sendBn').onclick=null;
+		Console.log("websocket已被关闭")；
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

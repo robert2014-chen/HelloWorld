@@ -1,0 +1,5 @@
+package com.robert.blend.hibernate.domain;
+
+public enum Season {
+
+}

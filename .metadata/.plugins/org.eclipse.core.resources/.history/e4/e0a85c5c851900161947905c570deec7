@@ -1,0 +1,13 @@
+package com.robert.blend.thinking.utils;
+
+public class JDBCHelper {
+
+	private JDBCHelper jdbcHelper = null;
+
+	private JDBCHelper() {
+	}
+
+	public static JDBCHelper newInstance() {
+		return new JDBCHelper();
+	}
+}

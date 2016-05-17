@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>blend-struts</artifactId>
+	<packaging>war</packaging>
+	<name>blend-struts Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<parent>
+		<groupId>com.robert.blend</groupId>
+		<artifactId>blend-all</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../blend-all</relativePath>
+	</parent>
+
+	<dependencies>
+
+		<!-- struts -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+		</dependency>
+
+		<!-- Struts整合Spring -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+		</dependency>
+
+		<!-- web 部份 -->
+		<!-- servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+		<!-- jsp -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+		</dependency>
+		<!-- jstl标签 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- server -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-websocket</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+			<!-- jdk编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- war包插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<!-- 指定打包的名称 -->
+					<warName>struts</warName>
+				</configuration>
+			</plugin>
+
+
+			<!-- jetty服务器插件 -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<httpConnector>
+						<port>9999</port>
+					</httpConnector>
+					<stopKey>shutdown</stopKey>
+					<stopPort>9966</stopPort>
+					<!-- 自动热部署：默认值是 0。大于 0 的数值表示开启，0 表示关闭，单位为秒。以配置数值为一个周期，自动的扫描文件检查其内容是否有变化，如果发现文件的 
+						内容被改变，则自动重新部署运用。 -->
+					<scanIntervalSeconds>2</scanIntervalSeconds>
+					<!-- 手动重加载 -->
+					<!-- <reload>manual</reload> -->
+					<dumpOnStart>true</dumpOnStart>
+					<webApp>
+						<contextPath>/struts</contextPath>
+						<resourceBases>
+							<!-- 项目的静态资源文件目录默认是 src/main/webapp -->
+							<resourceBase>${project.basedir}/src/main/webapp</resourceBase>
+							<!-- <resourceBase>${project.basedir}/commons</resourceBase> -->
+						</resourceBases>
+					</webApp>
+					<!-- 访问日志 -->
+					<requestLog implementation="org.eclipse.jetty.server.NCSARequestLog">
+						<filename>target/access-yyyy_mm_dd.log</filename>
+						<filenameDateFormat>yyyy_MM_dd</filenameDateFormat>
+						<logDateFormat>yyyy-MM-dd HH:mm:ss</logDateFormat>
+						<logTimeZone>GMT+8:00</logTimeZone>
+						<append>true</append>
+						<logServer>true</logServer>
+						<retainDays>120</retainDays>
+						<logCookies>true</logCookies>
+					</requestLog>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<finalName>blend-struts</finalName>
+	</build>
+</project>

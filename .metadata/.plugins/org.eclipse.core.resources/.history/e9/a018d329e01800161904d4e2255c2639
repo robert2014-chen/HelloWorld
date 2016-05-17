@@ -1,0 +1,39 @@
+package com.robert.blend.spring.event;
+
+public class EmailEvent {
+
+	private String address;
+
+	private String text;
+
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address
+	 *            the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	/**
+	 * @return the text
+	 */
+	public String getText() {
+		return text;
+	}
+
+	/**
+	 * @param text
+	 *            the text to set
+	 */
+	public void setText(String text) {
+		this.text = text;
+	}
+
+}

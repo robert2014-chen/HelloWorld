@@ -1,0 +1,123 @@
+package com.robert.blend.hibernate.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hibernate.annotations.Formula;
+
+@Entity
+@Table(name = "news_info")
+public class News {
+
+	private Integer Id;
+
+	private String name;
+
+	private String content;
+
+	private String fullContent;
+
+	private String nothing;
+	
+	private Season season;
+
+	/**
+	 * @return the id
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Integer getId() {
+		return Id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(Integer id) {
+		Id = id;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name
+	 *            the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the content
+	 */
+	public String getContent() {
+		return content;
+	}
+
+	/**
+	 * @param content
+	 *            the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	/**
+	 * <p>
+	 * <p>
+	 * 使用@Formula注解修饰的属性不需要采用数据列保存，该属性将由系统根据SQL表达式来生成。
+	 * </p>
+	 * <dl>
+	 * <dt>@Formula注解的使用注意事项：</dt>
+	 * <dd>value="(sql)"的英文括号不能少</dd>
+	 * <dd>英文括号中的为SQL表达式，SQL表达式的列名和表名都应该和数据库对应</dd>
+	 * <dd>value中的参数，将当前持久化对象的属性作为参数注入</dd>
+	 * </dl>
+	 * </p>
+	 * 
+	 * @return the fullContent
+	 */
+	@Formula("(select concat(nt.title,nt.content) from news_info nt where nt.id=id)")
+	public String getFullContent() {
+		return fullContent;
+	}
+
+	/**
+	 * @param fullContent
+	 *            the fullContent to set
+	 */
+	public void setFullContent(String fullContent) {
+		this.fullContent = fullContent;
+	}
+
+	/**
+	 * <p>
+	 * 使用@Transient注解修饰不想持久化的属性
+	 * </p>
+	 * 
+	 * @return the nothing
+	 */
+	@Transient
+	public String getNothing() {
+		return nothing;
+	}
+
+	/**
+	 * @param nothing
+	 *            the nothing to set
+	 */
+	public void setNothing(String nothing) {
+		this.nothing = nothing;
+	}
+
+}

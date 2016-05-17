@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>mywebtag</short-name>
+	<uri>http://web.robert.com/mywebtag</uri>
+	<tag>
+		<name>iterator</name>
+		<tag-class>com.robert.web.tag.IteratorTag</tag-class>
+		<body-content>scriptless</body-content>
+		<attribute>
+			<name>collection</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+		<attribute>
+			<name>item</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>fragment</name>
+		<tag-class>com.robert.web.tag.FragmentTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>fragment</name>
+			<required>true</required>
+			<fragment>true</fragment>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>dynamicattr</name>
+		<tag-class>com.robert.web.tag.DynamicAttributesTag</tag-class>
+		<body-content>empty</body-content>
+		<dynamic-attributes>true</dynamic-attributes>
+	</tag>
+
+</taglib>

@@ -1,0 +1,5 @@
+package com.robert.blend.thinking.thread.ticket.dao;
+
+public class TicketDao {
+
+}

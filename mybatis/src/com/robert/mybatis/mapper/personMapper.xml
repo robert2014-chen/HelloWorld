@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace命名空间,作用就是对sql进行分类化的管理,理解为sql隔离 注意:使用mapper代理开发时，namespace有特殊作用,namespace的值习惯上设置成包名+sql映射文件名 -->
+<mapper namespace="com.robert.mybatis.mapper.personMapper">
+
+
+	<!-- 调用存储过程 -->
+	<select id="getPersonSN" parameterMap="getPersonSNMap"
+		statementType="CALLABLE">
+		CALL getPersonSN(?)
+	</select>
+
+	<parameterMap type="java.util.Map" id="getPersonSNMap">
+		<parameter property="personSN" mode="OUT" jdbcType="INTEGER" />
+	</parameterMap>
+
+</mapper>

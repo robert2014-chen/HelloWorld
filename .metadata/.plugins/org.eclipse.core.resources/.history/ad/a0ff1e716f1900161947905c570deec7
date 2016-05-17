@@ -1,0 +1,12 @@
+package com.robert.blend.thinking.innerclass;
+
+public class MyInnerClass {
+
+	public String pro1 = "pro1";
+
+	class Hello {
+		public void print() {
+			System.out.println(pro1);
+		}
+	}
+}
