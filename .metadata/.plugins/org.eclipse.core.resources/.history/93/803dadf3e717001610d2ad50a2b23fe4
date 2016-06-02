@@ -1,7 +1,0 @@
-package com.robert.blend.hibernate.event;
-
-import org.hibernate.EmptyInterceptor;
-
-public class MyInterceptor extends EmptyInterceptor {
-
-}

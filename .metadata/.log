@@ -1,58 +1,381 @@
 
-!ENTRY org.eclipse.egit.ui 4 0 2016-05-17 11:49:42.533
-!MESSAGE Exception caught during execution of add command
+!ENTRY org.eclipse.ui.ide 4 4 2016-05-27 16:09:02.427
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2016-05-27 16:09:02.427
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2016-05-27 16:09:02.427
+!MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SESSION 2016-06-01 08:15:05.782 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-06-01 08:16:02.747
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-01 08:16:38.397
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-01 08:16:38.399
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\CHEN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.042
+!MESSAGE properties loading for project 'RemoteSystemsTempFiles'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.076
+!MESSAGE properties loading for project 'blend-all'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.077
+!MESSAGE properties loading for project 'blend-hibernate'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.077
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.078
+!MESSAGE properties loading for project 'blend-netty'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.078
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.079
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.079
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.080
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.080
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.081
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.081
+!MESSAGE properties loading for project 'blend-struts'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.082
+!MESSAGE loading file 'messa.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.082
+!MESSAGE loading file 'messa_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.083
+!MESSAGE loading file 'messa.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.083
+!MESSAGE loading file 'messa_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.083
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.084
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.084
+!MESSAGE properties loading for project 'blend-thinking'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.085
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.110
+!MESSAGE properties loading for project 'jetty'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.111
+!MESSAGE properties loading for project 'mybatis'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.111
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-01 08:16:40.111
+!MESSAGE properties loading for project 'web-tag'
+!SESSION 2016-06-02 10:56:25.745 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-02 10:57:13.074
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-02 10:57:13.079
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\CHEN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.267
+!MESSAGE properties loading for project 'RemoteSystemsTempFiles'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.269
+!MESSAGE properties loading for project 'blend-all'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.269
+!MESSAGE properties loading for project 'blend-hibernate'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.269
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.358
+!MESSAGE properties loading for project 'blend-netty'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.359
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.434
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.435
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.436
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.447
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.447
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.526
+!MESSAGE properties loading for project 'blend-struts'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.527
+!MESSAGE loading file 'messa.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.563
+!MESSAGE loading file 'messa_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.564
+!MESSAGE loading file 'messa.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.588
+!MESSAGE loading file 'messa_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.589
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.589
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.589
+!MESSAGE properties loading for project 'blend-thinking'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.590
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.603
+!MESSAGE properties loading for project 'jetty'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.604
+!MESSAGE properties loading for project 'mybatis'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.604
+!MESSAGE loading file 'jdbc.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:57:14.604
+!MESSAGE properties loading for project 'web-tag'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:58:58.260
+!MESSAGE properties loading for project 'blend-netty'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:58:58.260
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:58:58.261
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 10:59:00.294
+!MESSAGE Failed to execute:  Delete FROM user Where User='spring'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 10:59:00.295
+!MESSAGE com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'test.user' doesn't exist
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 10:59:01.653
+!MESSAGE Failed to execute:  
+ 
+ 
+ DELIMITER $$ CREATE EVENT spring.clear_test ON SCHEDULE EVERY 15 SECOND DO BEGIN DELETE FROM spring.T_USER_ATTEMPTS  WHERE  D_LASTMODIFIED < DATE_ADD(NOW(),INTERVAL -15 SECOND); UPDATE spring.T_USERS u SET u.D_ACCOUNTNONLOCKED=1 WHERE u.D_ACCOUNTNONLOCKED=0;END $$ DELIMITER 
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:03.220
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:03.220
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:03.221
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:03.221
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.029
+!MESSAGE properties loading for project 'blend-struts'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.030
+!MESSAGE loading file 'messa.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.031
+!MESSAGE loading file 'messa_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.032
+!MESSAGE loading file 'messa.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.032
+!MESSAGE loading file 'messa_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.033
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.033
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.034
+!MESSAGE properties loading for project 'blend-thinking'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 10:59:09.034
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-06-02 10:59:34.978
+!MESSAGE An internal error occurred
 !STACK 0
-org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of add command
-	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:212)
-	at org.eclipse.egit.core.op.CommitOperation.addUntracked(CommitOperation.java:222)
-	at org.eclipse.egit.core.op.CommitOperation.access$4(CommitOperation.java:210)
-	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:195)
+org.eclipse.jgit.api.errors.JGitInternalException: Entry not found by path: .metadata/.plugins/org.eclipse.core.resources/.projects/blend-hibernate/org.eclipse.jdt.core/state.dat
+	at org.eclipse.jgit.api.CommitCommand.createTemporaryIndex(CommitCommand.java:432)
+	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:203)
+	at org.eclipse.egit.core.op.CommitOperation.commit(CommitOperation.java:243)
+	at org.eclipse.egit.core.op.CommitOperation.access$5(CommitOperation.java:232)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:196)
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
 	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:206)
 	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:93)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-Caused by: java.io.IOException: 另一个程序已锁定文件的一部分，进程无法访问。
-	at java.io.FileInputStream.readBytes(Native Method)
-	at java.io.FileInputStream.read(Unknown Source)
-	at org.eclipse.jgit.util.IO.readFully(IO.java:302)
-	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:100)
-	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:188)
-	... 7 more
 
-!ENTRY org.eclipse.egit.ui 4 0 2016-05-17 14:16:41.245
-!MESSAGE Branch failed
-!STACK 1
-org.eclipse.core.runtime.CoreException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
-	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:138)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
-	at org.eclipse.egit.core.op.BranchOperation.execute(BranchOperation.java:164)
-	at org.eclipse.egit.ui.internal.branch.BranchOperationUI$1.runInWorkspace(BranchOperationUI.java:279)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-Caused by: org.eclipse.jgit.api.errors.JGitInternalException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
-	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:315)
-	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:134)
-	... 5 more
-Caused by: java.io.IOException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
-	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1232)
-	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:459)
-	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
-	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:258)
-	... 6 more
-!SUBENTRY 1 org.eclipse.egit.core 4 0 2016-05-17 14:16:41.245
-!MESSAGE Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
-!STACK 0
-org.eclipse.jgit.api.errors.JGitInternalException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
-	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:315)
-	at org.eclipse.egit.core.op.BranchOperation$1.run(BranchOperation.java:134)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
-	at org.eclipse.egit.core.op.BranchOperation.execute(BranchOperation.java:164)
-	at org.eclipse.egit.ui.internal.branch.BranchOperationUI$1.runInWorkspace(BranchOperationUI.java:279)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-Caused by: java.io.IOException: Could not rename file E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\._0.log704944462710391596.tmp to E:\luna_workspace\.metadata\.plugins\org.eclipse.m2e.logback.configuration\0.log
-	at org.eclipse.jgit.dircache.DirCacheCheckout.checkoutEntry(DirCacheCheckout.java:1232)
-	at org.eclipse.jgit.dircache.DirCacheCheckout.doCheckout(DirCacheCheckout.java:459)
-	at org.eclipse.jgit.dircache.DirCacheCheckout.checkout(DirCacheCheckout.java:394)
-	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:258)
-	... 6 more
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-02 11:04:26.244
+!MESSAGE Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-02 11:04:26.345
+!MESSAGE Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:04:27.199
+!MESSAGE Unable to configure blend-spring
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.701
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.702
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.703
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.703
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-02 11:04:27.826
+!MESSAGE Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-02 11:04:27.828
+!MESSAGE Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.969
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.969
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:27.970
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:04:29.166
+!MESSAGE Failed to execute:  Delete FROM user Where User='spring'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:04:29.167
+!MESSAGE com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'test.user' doesn't exist
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:04:30.488
+!MESSAGE Failed to execute:  
+ 
+ 
+ DELIMITER $$ CREATE EVENT spring.clear_test ON SCHEDULE EVERY 15 SECOND DO BEGIN DELETE FROM spring.T_USER_ATTEMPTS  WHERE  D_LASTMODIFIED < DATE_ADD(NOW(),INTERVAL -15 SECOND); UPDATE spring.T_USERS u SET u.D_ACCOUNTNONLOCKED=1 WHERE u.D_ACCOUNTNONLOCKED=0;END $$ DELIMITER 
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:30.535
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:30.535
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:30.536
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:04:30.536
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-02 11:05:42.129
+!MESSAGE Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-02 11:05:42.131
+!MESSAGE Failed to retrieve plugin descriptor for org.eclipse.m2e:lifecycle-mapping:1.0.0: Plugin org.eclipse.m2e:lifecycle-mapping:1.0.0 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.eclipse.m2e:lifecycle-mapping:jar:1.0.0
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:05:42.325
+!MESSAGE Unable to configure blend-spring
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.543
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.543
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.544
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.544
+!MESSAGE loading file 'pom.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.595
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.595
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:42.596
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:05:42.931
+!MESSAGE Failed to execute:  Delete FROM user Where User='spring'
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2016-06-02 11:05:42.932
+!MESSAGE com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'test.user' doesn't exist
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:44.345
+!MESSAGE properties loading for project 'blend-spring'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:44.346
+!MESSAGE loading file 'message_en_US.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:44.346
+!MESSAGE loading file 'message_zh_CN.properties'
+
+!ENTRY jp.gr.java_conf.ussiy.app.propedit 1 0 2016-06-02 11:05:44.346
+!MESSAGE loading file 'pom.properties'

@@ -1,9 +1,0 @@
-package com.robert.blend.web.websocket;
-
-import javax.websocket.server.ServerEndpoint;
-
-@ServerEndpoint(value="/websocket/chat")
-public class ChatEndpoint {
-
-	
-}

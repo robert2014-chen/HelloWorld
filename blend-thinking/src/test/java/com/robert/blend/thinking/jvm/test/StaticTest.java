@@ -10,15 +10,16 @@ package com.robert.blend.thinking.jvm.test;
  */
 public class StaticTest {
 	public static void main(String[] args) {
-		// staticFunction();
-		new StaticTest();
+//		staticFunction();
+		 new StaticTest();
 	}
 
+	// new关键字，在验证等阶段前实例化，故在3输出时，a有值
 	// static StaticTest st = new StaticTest();
 	static {
 		System.out.println("1");
 	}
-	//非静态代码块
+	// 非静态代码块
 	{
 		System.out.println("2");
 	}

@@ -1,5 +1,0 @@
-package com.robert.blend.hibernate.util;
-
-public class HibernateUtil {
-
-}

@@ -1,7 +1,0 @@
-package com.robert.blend.thinking.innerclass;
-
-import junit.framework.TestCase;
-
-public class MyInnerClassTest extends TestCase {
-
-}

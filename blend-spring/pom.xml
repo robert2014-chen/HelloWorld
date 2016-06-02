@@ -1,10 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.robert.blend</groupId>
 	<artifactId>blend-spring</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>blend-spring Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
@@ -85,7 +83,36 @@
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
 
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+
+		<!-- mysql数据库驱动 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 
 		<!-- web 部份 -->
 		<!-- servlet -->
@@ -107,5 +134,128 @@
 	</dependencies>
 	<build>
 		<finalName>blend-spring</finalName>
+
+		<plugins>
+
+			<!--This plugin's configuration is used to store Eclipse m2e settings 
+				only. It has no influence on the Maven build itself. -->
+			<plugin>
+				<groupId>org.eclipse.m2e</groupId>
+				<artifactId>lifecycle-mapping</artifactId>
+			</plugin>
+
+			<!-- 数据库插件 -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sql-maven-plugin</artifactId>
+
+				<executions>
+					<execution>
+						<id>drop-db-before-test-if-any</id>
+						<!-- 绑定阶段 -->
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<!-- need another database to drop the targeted one -->
+							<url>jdbc:mysql://10.203.138.231:3306/test</url>
+							<settingsKey>sensibleKey</settingsKey>
+							<autocommit>true</autocommit>
+							<srcFiles>
+								<srcFile>src/test/resources/drop-db-user.sql</srcFile>
+							</srcFiles>
+							<!-- <sqlCommand>drop database spring</sqlCommand> -->
+							<!-- ignore error when database is not avaiable -->
+							<onError>continue</onError>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>create-db</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<url>jdbc:mysql://10.203.138.231:3306/test</url>
+							<!-- no transaction -->
+							<autocommit>true</autocommit>
+							<settingsKey>sensibleKey</settingsKey>
+							<srcFiles>
+								<srcFile>src/test/resources/create-db-user.sql</srcFile>
+							</srcFiles>
+							<!-- <sqlCommand>create database spring</sqlCommand> -->
+							<!-- <sqlCommand>grant all privileges on spring.* to 'spring'@'%' 
+								identified by 'spring'</sqlCommand> -->
+						</configuration>
+					</execution>
+					<execution>
+						<id>create-schema</id>
+						<phase>process-test-resources</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<url>jdbc:mysql://10.203.138.231:3306/spring</url>
+							<username>spring</username>
+							<password>spring</password>
+							<autocommit>true</autocommit>
+							<srcFiles>
+								<srcFile>src/test/resources/create_schema.sql</srcFile>
+							</srcFiles>
+						</configuration>
+					</execution> <!--<execution> <id>create-data</id> <phase>process-test-resources</phase> 
+						<goals> <goal>execute</goal> </goals> <configuration> <orderFile>ascending</orderFile> 
+						<fileset> <basedir>${basedir}</basedir> <includes> <include>src/test/resources/sql/test-data.sql</include> 
+						</includes> </fileset> </configuration> </execution> -->
+					<!-- drop db after test -->
+					<!-- <execution> <id>drop-db-after-test</id> <phase>test</phase> <goals> 
+						<goal>execute</goal> </goals> <configuration> <autocommit>true</autocommit> 
+						<sqlCommand>drop database util_test</sqlCommand> </configuration> </execution> -->
+				</executions>
+			</plugin>
+
+			<!-- jetty服务器插件 -->
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<httpConnector>
+						<port>9999</port>
+					</httpConnector>
+					<stopKey>shutdown</stopKey>
+					<stopPort>9966</stopPort>
+					<!-- 自动热部署：默认值是 0。大于 0 的数值表示开启，0 表示关闭，单位为秒。以配置数值为一个周期，自动的扫描文件检查其内容是否有变化，如果发现文件的 
+						内容被改变，则自动重新部署运用。 -->
+					<scanIntervalSeconds>2</scanIntervalSeconds>
+					<!-- 手动重加载 -->
+					<!-- <reload>manual</reload> -->
+					<dumpOnStart>true</dumpOnStart>
+					<webApp>
+						<contextPath>/spring</contextPath>
+						<resourceBases>
+							<!-- 项目的静态资源文件目录默认是 src/main/webapp -->
+							<resourceBase>${project.basedir}/src/main/webapp</resourceBase>
+							<!-- <resourceBase>${project.basedir}/commons</resourceBase> -->
+						</resourceBases>
+					</webApp>
+					<!-- 访问日志 -->
+					<requestLog implementation="org.eclipse.jetty.server.NCSARequestLog">
+						<filename>target/access-yyyy_mm_dd.log</filename>
+						<filenameDateFormat>yyyy_MM_dd</filenameDateFormat>
+						<logDateFormat>yyyy-MM-dd HH:mm:ss</logDateFormat>
+						<logTimeZone>GMT+8:00</logTimeZone>
+						<append>true</append>
+						<logServer>true</logServer>
+						<retainDays>120</retainDays>
+						<logCookies>true</logCookies>
+					</requestLog>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+
 	</build>
 </project>

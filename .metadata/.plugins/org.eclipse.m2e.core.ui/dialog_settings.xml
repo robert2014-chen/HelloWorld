@@ -58,6 +58,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\luna_workspace\blend-thinking"/>
 			<item value="E:\luna_workspace\blend-hibernate"/>
 			<item value="E:\luna_workspace\blend-netty"/>
 		</list>
@@ -71,6 +72,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.robert.blend"/>
 			<item value="com.robert.blend.blend_all"/>
 			<item value="com.robert.blend.thinking"/>
 			<item value="com.robert.blend.spring"/>

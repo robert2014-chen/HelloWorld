@@ -14,8 +14,9 @@
 		<!-- 改变maven的编码格式 -->
 		<argLine>-Dfile.encoding=UTF-8</argLine>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.1.4.RELEASE</spring.version>
+		<spring.version>4.2.5.RELEASE</spring.version>
 		<struts.version>2.3.20</struts.version>
+		<spring.security.version>4.0.3.RELEASE</spring.security.version>
 		<org.eclipse.jetty.version>9.2.7.v20150116</org.eclipse.jetty.version>
 	</properties>
 
@@ -138,6 +139,36 @@
 				<version>${spring.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- Spring Security -->
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-taglibs</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
 			<!-- struts -->
 			<dependency>
 				<groupId>org.apache.struts</groupId>
@@ -233,7 +264,12 @@
 				<version>2.2.1</version>
 			</dependency>
 
-
+			<dependency>
+				<groupId>com.robert.util</groupId>
+				<artifactId>dbunit-util</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<scope>test</scope>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
@@ -286,6 +322,60 @@
 					<configuration>
 						<!-- 能将module的javadoc集成过来 -->
 						<aggregate>true</aggregate>
+					</configuration>
+				</plugin>
+
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>sql-maven-plugin</artifactId>
+										<versionRange>[1.5,)</versionRange>
+										<goals>
+											<goal>execute</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+				<!-- 数据库插件 -->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>sql-maven-plugin</artifactId>
+					<version>1.5</version>
+
+					<dependencies>
+						<!-- specify the dependent jdbc driver here -->
+						<dependency>
+							<groupId>mysql</groupId>
+							<artifactId>mysql-connector-java</artifactId>
+							<version>5.1.19</version>
+						</dependency>
+					</dependencies>
+
+					<!-- common configuration shared by all executions -->
+					<configuration>
+						<driver>com.mysql.jdbc.Driver</driver>
+						<url>jdbc:mysql://10.203.138.231:3306/test</url>
+						<!-- You can comment out username/password configurations and have 
+							maven to look them up in your settings.xml using ${settingsKey} -->
+						<settingsKey>sensibleKey</settingsKey>
+						<!--all executions are ignored if -Dmaven.test.skip=true -->
+						<!-- <skip>${maven.test.skip}</skip> -->
 					</configuration>
 				</plugin>
 

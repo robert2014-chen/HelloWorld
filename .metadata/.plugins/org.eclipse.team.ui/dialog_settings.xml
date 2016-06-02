@@ -4,10 +4,12 @@
 		<item value="org.eclipse.egit.ui.internal.sharing.SharingWizard" key="selectedWizardId"/>
 	</section>
 	<section name="SynchronizeViewSettings">
-		<item value="1463456073748" key="lastactiveparticipant_sec_id"/>
+		<item value="1463465945200" key="lastactiveparticipant_sec_id"/>
 		<item value="org.eclipse.egit.ui.modelCompareParticipant" key="lastactiveparticipant_id"/>
 		<item value="false" key="linkWithEditor"/>
 		<section name="org.eclipse.egit.ui.modelCompareParticipant.1463455960386">
+		</section>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1463465945200">
 		</section>
 		<section name="org.eclipse.egit.ui.modelCompareParticipant.1463456073748">
 		</section>

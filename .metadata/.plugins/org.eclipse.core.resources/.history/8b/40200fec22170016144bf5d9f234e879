@@ -1,5 +1,0 @@
-package com.robert.blend.hibernate.domain;
-
-public class News {
-
-}

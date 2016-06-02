@@ -11,6 +11,8 @@ E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\29916155
 \blend-struts\src\main\java
 E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1459139654.index
 \blend-struts\src\main\java
+E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\41901590.index
+\blend-spring\src\main\resources
 E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2399254523.index
 \blend-spring\src\main\resources
 E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\396738234.index
@@ -21,5 +23,7 @@ E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\24422780
 \blend-struts\src\main\java
 E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\398112023.index
 \blend-netty\src\main\resources
+E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1918916666.index
+\blend-spring\src\main\resources
 E:\luna_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\906805000.index
 \blend-struts\src\main\resources

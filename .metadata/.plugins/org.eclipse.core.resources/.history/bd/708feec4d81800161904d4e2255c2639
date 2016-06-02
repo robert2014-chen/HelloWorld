@@ -1,7 +1,0 @@
-package com.robert.blend.spring.message;
-
-import org.junit.runner.RunWith;
-
-public class MessageTest {
-
-}
